@@ -1,0 +1,27 @@
+{
+  "name": "projeto-final-bootstrap",
+  "description": "Projeto final do curso de bootstrap",
+  "main": "index.js",
+  "authors": [
+    "Suelen Braga"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Bootstrap",
+    "NPM",
+    "Bower",
+    "Gulp"
+  ],
+  "homepage": "https://github.com/suelenbraga2006/projeto_final_bootstrap",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "components-font-awesome": "^4.7.0"
+  }
+}

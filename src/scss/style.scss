@@ -1,0 +1,69 @@
+@import "../components/bootstrap/scss/bootstrap.scss";
+@import "../components/components-font-awesome/scss/font-awesome.scss";
+
+@import "_sidebar.scss";
+
+@import "_header.scss";
+
+.center-block{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card{
+	margin-top: 2rem;
+
+	.nav{
+		flex-direction: column;
+	}
+
+	.card-header,
+	.card-footer{
+		background-color: #fff;
+	}
+
+	&.contractors{
+		.card-block{
+			display: flex;
+			justify-content: center;
+			.fa{
+				color: $brand-warning;
+				font-size: 5rem;
+			}
+		}
+		
+		.card-footer{
+			display: flex;
+			justify-content: space-between;
+			.item{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-size: 1.3rem;
+				.warning{
+					color: $brand-warning;
+				}
+				.info{
+					color: $brand-info;
+				}
+			}
+		}
+
+	}
+}
+
+.badge{
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	&.primary{
+		background-color: $brand-primary;
+	}
+	&.info{
+		background-color: $brand-info;
+	}
+	&.warning{
+		background-color: $brand-warning;
+	}
+}
