@@ -5,6 +5,10 @@
 
 @import "_header.scss";
 
+.row{
+	@include make-row();
+}
+
 .center-block{
 	display: block;
 	margin-left: auto;
@@ -12,10 +16,17 @@
 }
 
 .card{
-	margin-top: 2rem;
+	margin-bottom: 2.3rem;
+	height: 437px;
 
 	.nav{
 		flex-direction: column;
+		@include media-breakpoint-up('lg'){
+			flex-direction: row;
+			.nav-item{
+				margin-right: .5em;
+			}
+		}
 	}
 
 	.card-header,
@@ -27,6 +38,7 @@
 		.card-block{
 			display: flex;
 			justify-content: center;
+			align-items: center;
 			.fa{
 				color: $brand-warning;
 				font-size: 5rem;
@@ -65,5 +77,32 @@
 	}
 	&.warning{
 		background-color: $brand-warning;
+	}
+}
+
+.container{
+	width: 100%;
+}
+
+.coluna-menor,
+.coluna-maior {
+	width: 100%;
+	padding: 0 30px;
+}
+
+@include media-breakpoint-up('sm'){
+	.coluna-menor{
+		@include make-col-project(4);
+	}
+
+	.coluna-maior{
+		@include make-col-project(8);
+	}
+}
+
+@include media-breakpoint-up('lg'){
+	.container{
+		width: 84%;
+		margin-left: 190px;
 	}
 }
